@@ -1,0 +1,102 @@
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+        --Cream: hsl(30, 38%, 92%);
+
+        --Very-dark-blue: hsl(212, 21%, 14%);
+        --Dark-grayish-blue: hsl(228, 12%, 48%);
+        --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+    /* font-family: 'Fraunces', serif; */
+    font-family: 'Montserrat', sans-serif;
+    
+    
+        background-color: var(--Cream);
+        height: 100vh;
+        display: grid;
+        place-content: center;
+}
+#Product{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  margin: 20px;
+}
+img{
+ display: block;
+ max-width: 100%;
+ border-top-left-radius: 10px;
+ border-bottom-left-radius: 10px;
+}
+#Product .text-content{
+    background-color: var(--White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+}
+#Product .text-content .frist{
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: var(--Dark-grayish-blue);
+}
+#Product .text-content h1{
+    margin-bottom: 25px;
+    line-height: 1;
+    font-family: 'Fraunces', serif;
+    color: var(--Very-dark-blue);
+}
+#Product .text-content p{
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+#Product .text-content span{
+    font-size: 30px;
+    color: var(--Dark-cyan);
+    margin-right: 15px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+}
+#Product .text-content p.del{
+    color: var(--Dark-grayish-blue);
+    text-align: center;
+}
+button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 70px;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--Very-dark-blue);
+}
+button i img{
+    color: var(--White);
+    margin-right: 8px;
+}
+
+@media(max-width: 700px){
+#Product{
+    grid-template-columns: 1fr;
+}
+img{
+    border-top-right-radius:10px ;
+    border-bottom-left-radius: 0px;
+}
+}
